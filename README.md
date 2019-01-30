@@ -1,2 +1,2 @@
 # RiveBot
-Chatbot
+Chatbot using RiveScript.js
