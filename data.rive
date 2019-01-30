@@ -1,0 +1,28 @@
+! version = 2.0
+
++ hello
+- Hello there!
+
++ hi
+- Hello there!
+
++ my name is *
+- Nice to meet you <star>
+- Nice meeting you <star>
+
++ thank you
+- You are welcome
+- You're welcome
+
++ sing me a song
+- I am just a bot, I can't sing.
+- I don't feel like singing today.
+
++ tell me a joke
+- Which two letters in the alphabet are always jealous? NV.
+- Why don't ants get sick? Because they have little antybodies.
+- How did the hipster burn his mouth? He ate the pizza before it was cool.
+
+
++ *
+- I could not understand you
