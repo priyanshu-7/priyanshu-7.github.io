@@ -1,14 +1,62 @@
 ! version = 2.0
 
+// Bot variables
+! var name = RiveBot
+! var age  = 0.1
+
+// Substitutions
+! sub i'm     = i am
+! sub i'd     = i would
+! sub i've    = i have
+! sub i'll    = i will
+! sub don't   = do not
+! sub isn't   = is not
+! sub you'd   = you would
+! sub you're  = you are
+! sub you've  = you have
+! sub you'll  = you will
+! sub what's  = what is
+! sub whats   = what is
+! sub what're = what are
+! sub what've = what have
+! sub what'll = what will
+! sub who's   = who is
+
 + hello
-- Hello there!
+- Hi there!
+- Hey!
+- Howdy!
+
++ hey
+@ hello
 
 + hi
-- Hello there!
+@ hello
+
++ google *
+- Google search for <star1>: <a href="http://google.com/search?q=<star1>">Click Here</a>
 
 + my name is *
-- Nice to meet you <star>
-- Nice meeting you <star>
+- <set name=<star>>It's nice to meet you, <get name>.
+
++ what is my name
+- Your name is <get name>, silly!
+
++ i am # years old
+- <set age=<star>>I will remember that you are <get age> years old.
+
++ how old am i
+- You are <get age> years old.
+
++ what is your name
+- You can call me <bot name>.
+- My name is <bot name>.
+
++ how old are you
+- I am <bot age> years old.
+
++ i am (really|very|super) tired
+- I'm sorry to hear that you are <star> tired.
 
 + thank you
 - You are welcome
