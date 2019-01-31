@@ -78,6 +78,12 @@
 + [*] gif images [*]
 - GIIIIIIF!
 
++ date
+- The current date & time is:
+
++ time
+@ date
+
 > topic sorry
 
   // This will match if the word "sorry" exists ANYWHERE in their message

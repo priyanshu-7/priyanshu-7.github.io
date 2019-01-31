@@ -20,6 +20,11 @@ function botReply(message){
    console.log('debug');
    gif();
  }
+ if(message === "The current date & time is:")
+ {
+   var date = new Date();
+   message_container.innerHTML += `<div class="bot">${date}</div>`;
+ }
 
 }
 
