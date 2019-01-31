@@ -62,6 +62,35 @@
 - You are welcome
 - You're welcome
 
++ [*] sorry [*]
+- It's okay.
+
++ [*] depressed [*]
+- If you or anyone you know are feeling depressed, you should know that there is
+^ always someone who's having your back, they care about you! Talk to them!
+
++ [*] hate you [*]
+- You're really mean! I'm not talking again until you apologize.{topic=sorry}
+
++ [*] you are retarded [*]
+- You're really mean! I'm not talking again until you apologize.{topic=sorry}
+
++ [*] gif images [*]
+- GIIIIIIF!
+
+> topic sorry
+
+  // This will match if the word "sorry" exists ANYWHERE in their message
+  + [*] sorry [*]
+  - It's OK, I'll forgive you!{topic=random}
+
+  + *
+  - Nope, not until you apologize.
+  - Say you're sorry!
+  - Apologize!
+
+< topic
+
 + sing me a song
 - I am just a bot, I can't sing.
 - I don't feel like singing today.

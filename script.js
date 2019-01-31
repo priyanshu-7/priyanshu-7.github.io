@@ -15,6 +15,12 @@ form.addEventListener('submit', (e) => {
 //bot reply
 function botReply(message){
  message_container.innerHTML += `<div class="bot">Bot: ${message}</div>`;
+ if(message === "GIIIIIIF!")
+ {
+   console.log('debug');
+   gif();
+ }
+
 }
 
 //user query
@@ -35,4 +41,14 @@ function botReady(){
 //on bot load fail
 function botNotReady(err){
  console.log("Bot failed to load", err);
+}
+
+function randomGIF()
+{
+  var randomGifArray = ["images/1.gif", "images/2.gif", "images/3.gif", "images/4.gif", "images/5.gif"];
+  var gif = Math.floor( Math.random() * randomGifArray.length);
+  return randomGifArray[gif];
+}
+function gif() {
+  message_container.innerHTML += `<div class="bot"><img src= ${randomGIF()} "height="100" width="100"/></div>`;
 }
