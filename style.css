@@ -1,9 +1,12 @@
 
 .chatbox {
- width: 400px;
- height: 90%;
- position: fixed;
- overflow: scroll;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ text-align: center;
+ width: 100%;
+ min-height: 200px;
 }
 .actions {
  position: fixed;
@@ -13,7 +16,8 @@
 }
 .actions input{
  height: 30px;
- display: block;
+ opacity: 0.5;
+ position: center;
  width: 26%;
  outline: 0;
  border-top: 0;
@@ -21,7 +25,7 @@
  border-right: 0;
 }
 .messages div {
- max-width: 60%;
+ max-width: 200%;
  display: block;
  margin: 5px;
  padding: 10px;

@@ -25,7 +25,10 @@ function botReply(message){
    var date = new Date();
    message_container.innerHTML += `<div class="bot">${date}</div>`;
  }
-
+ if(message === "Clearing chatbox")
+ {
+   clear();
+ }
 }
 
 //user query
@@ -40,7 +43,7 @@ function userQuery(message){
 //on bot successful load
 function botReady(){
  bot.sortReplies();
- botReply('Hello, I am a bot.');
+ botReply('Hello, I am a bot. You can chat with me or type in some commands to which I will try to respond. To start, say "hello"!');
 }
 
 //on bot load fail
@@ -56,4 +59,10 @@ function randomGIF()
 }
 function gif() {
   message_container.innerHTML += `<div class="bot"><img src= ${randomGIF()} "height="100" width="100"/></div>`;
+}
+function clear()
+{
+  const div = document.getElementById("main");
+  div.classList.remove("messages");
+  //document.body.classList.add("messages");
 }

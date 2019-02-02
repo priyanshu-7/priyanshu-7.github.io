@@ -33,11 +33,18 @@
 + hi
 @ hello
 
+
+
++ commands
+- date (or time): Display current date and time
+^ google <query>: Perform a Google search
+^ gif images: GIIIF IMAGES!
+
 + google *
 - Google search for <star1>: <a href="http://google.com/search?q=<star1>">Click Here</a>
 
-+ my name is *
-- <set name=<star>>It's nice to meet you, <get name>.
++ * my name is *
+- <set name=<star2>>It's nice to meet you, <get name>.
 
 + what is my name
 - Your name is <get name>, silly!
@@ -47,6 +54,9 @@
 
 + how old am i
 - You are <get age> years old.
+
++ clear
+- Clearing chatbox
 
 + what is your name
 - You can call me <bot name>.
