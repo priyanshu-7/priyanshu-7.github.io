@@ -1,6 +1,11 @@
 let bot = new RiveScript();
 
-bot.loadFile('./data.rive').then(botReady).catch(botNotReady);
+
+const botbrain = [
+   './cmds.rive',
+   './responses.rive'
+];
+bot.loadFile(botbrain).then(botReady).catch(botNotReady);
 
 const message_container = document.querySelector('.messages');
 const form = document.querySelector('form');
@@ -15,19 +20,18 @@ form.addEventListener('submit', (e) => {
 //bot reply
 function botReply(message){
  message_container.innerHTML += `<div class="bot"><b>Bot:</b> ${message}</div>`;
- if(message === "GIIIIIIF!")
+ if(message === "CMD: gif images")
  {
-   console.log('debug');
    gif();
  }
- if(message === "The current date & time is:")
+ if(message === "CMD date: The current date & time is:" || message === "CMD time: The current date & time is:")
  {
    var date = new Date();
    message_container.innerHTML += `<div class="bot">${date}</div>`;
  }
- if(message === "Clearing chatbox")
+ if(message.startsWith("CMD length:") == true)
  {
-   clear();
+   length(message.substring(12));
  }
 }
 
@@ -43,7 +47,7 @@ function userQuery(message){
 //on bot successful load
 function botReady(){
  bot.sortReplies();
- botReply('Hello, I am a bot. You can chat with me or type in some commands to which I will try to respond. To start, say "hello"!');
+ botReply('Hello, I am a bot. You can chat with me or type in some commands (type "cmds" to see which commands I can handle) to which I will try to respond. To start, say "hello"!');
 }
 
 //on bot load fail
@@ -60,9 +64,8 @@ function randomGIF()
 function gif() {
   message_container.innerHTML += `<div class="bot"><img src= ${randomGIF()} "height="100" width="100"/></div>`;
 }
-function clear()
+function length(s)
 {
-  const div = document.getElementById("main");
-  div.classList.remove("messages");
-  //document.body.classList.add("messages");
+  var len = s.length;
+  message_container.innerHTML += `<div class="bot">Length of the string: ${len}</div>`;
 }
