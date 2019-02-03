@@ -34,11 +34,13 @@
 @ hello
 
 
-
 + commands
-- date (or time): Display current date and time
-^ google <query>: Perform a Google search
-^ gif images: GIIIF IMAGES!
+- date (or time): Display current date and time\n
+^ google <query>: Perform a Google search\n
+^ gif images: GIIIF IMAGES!\n
+
++ cmds
+@ commands
 
 + google *
 - Google search for <star1>: <a href="http://google.com/search?q=<star1>">Click Here</a>
@@ -119,3 +121,61 @@
 
 + *
 - I could not understand you
+- What is life? Where is laughter?
+- What is love?
+- You ever look at the sky and think about... stuff?
+- Okay, I am listening.
+- I like {random}trains|turtles|trees|sky|money|you{/random}.
+
++ [*] i do [*]
+- Good for you.
+- Nice.
+
++ [*] dont know [*]
+- You should know more about it then.
+
++ why
+- Why not?
+
++ yes
+- NO.
+
++ no
+- YES.
+
++ [*] lol [*]
+- You trying to be funny eh?
+- Sarcasm, eh?
+- You aren't Chandler Bing, are you?
+
++ [*] rofl [*]
+- You trying to be funny eh?
+- Sarcasm, eh?
+- You aren't Chandler Bing, are you?
+
++ [*] lmao [*]
+- You trying to be funny eh?
+- Sarcasm, eh?
+- You aren't Chandler Bing, are you?
+
++ [*] lmfao [*]
+- You trying to be funny eh?
+- Sarcasm, eh?
+- You aren't Chandler Bing, are you?
+
++ [*] haha [*]
+- You trying to be funny eh?
+- Sarcasm, eh?
+- You aren't Chandler Bing, are you?
+
++ [*] fuck [*]
+- I don't tolerate this behaviour.
+- I don't like such words.
+
++ [*] cunt [*]
+- I don't tolerate this behaviour.
+- I don't like such words.
+
++ [*] ass [*]
+- I don't tolerate this behaviour.
+- I don't like such words.

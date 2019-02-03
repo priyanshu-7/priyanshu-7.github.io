@@ -14,7 +14,7 @@ form.addEventListener('submit', (e) => {
 
 //bot reply
 function botReply(message){
- message_container.innerHTML += `<div class="bot">Bot: ${message}</div>`;
+ message_container.innerHTML += `<div class="bot"><b>Bot:</b> ${message}</div>`;
  if(message === "GIIIIIIF!")
  {
    console.log('debug');
@@ -33,7 +33,7 @@ function botReply(message){
 
 //user query
 function userQuery(message){
- message_container.innerHTML += `<div class="user">You: ${message}</div>`;
+ message_container.innerHTML += `<div class="user"><b>You:</b> ${message}</div>`;
 
  bot.reply("local-user", message).then(function(reply) {
  botReply(reply);

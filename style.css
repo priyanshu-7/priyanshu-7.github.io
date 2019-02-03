@@ -25,6 +25,8 @@
  border-right: 0;
 }
 .messages div {
+ font-family: 'Arial', sans-serif;
+ font-family: 'Montserrat', sans-serif;
  max-width: 200%;
  display: block;
  margin: 5px;
