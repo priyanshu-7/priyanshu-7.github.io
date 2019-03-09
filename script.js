@@ -1,71 +1,277 @@
-let bot = new RiveScript();
-
-
-const botbrain = [
-   './cmds.rive',
-   './responses.rive'
-];
-bot.loadFile(botbrain).then(botReady).catch(botNotReady);
-
-const message_container = document.querySelector('.messages');
-const form = document.querySelector('form');
-const input_box = document.querySelector('input');
-
-form.addEventListener('submit', (e) => {
- e.preventDefault();
- userQuery(input_box.value);
- input_box.value = '';
-});
-
-//bot reply
-function botReply(message){
- message_container.innerHTML += `<div class="bot"><b>Bot:</b> ${message}</div>`;
- if(message === "CMD: gif images")
- {
-   gif();
- }
- if(message === "CMD date: The current date & time is:" || message === "CMD time: The current date & time is:")
- {
-   var date = new Date();
-   message_container.innerHTML += `<div class="bot">${date}</div>`;
- }
- if(message.startsWith("CMD length:") == true)
- {
-   length(message.substring(12));
- }
-}
-
-//user query
-function userQuery(message){
- message_container.innerHTML += `<div class="user"><b>You:</b> ${message}</div>`;
-
- bot.reply("local-user", message).then(function(reply) {
- botReply(reply);
- });
-}
-
-//on bot successful load
-function botReady(){
- bot.sortReplies();
- botReply('Hello, I am a bot. You can chat with me or type in some commands (type "cmds" to see which commands I can handle) to which I will try to respond. To start, say "hello"!');
-}
-
-//on bot load fail
-function botNotReady(err){
- console.log("Bot failed to load", err);
-}
-
-function randomGIF()
+var counter = 1;
+var x_score = 0;
+var o_score = 0;
+var game_end = 0;
+document.getElementById("box1").onclick = function()
 {
-  var randomGifArray = ["images/1.gif", "images/2.gif", "images/3.gif", "images/4.gif", "images/5.gif"];
-  var gif = Math.floor( Math.random() * randomGifArray.length);
-  return randomGifArray[gif];
+  if(counter%2!=0 && document.getElementById("box1").innerHTML == '' && game_end == 0)
+  {
+    document.getElementById("box1").innerHTML = 'X';
+    counter++; counterCheck();
+
+  }
+  else if(counter%2==0 && document.getElementById("box1").innerHTML == '' && game_end == 0)
+  {
+    document.getElementById("box1").innerHTML = 'O';
+    counter++; counterCheck();
+  }
 }
-function gif() {
-  message_container.innerHTML += `<div class="bot"><img src= ${randomGIF()} "height="100" width="100"/></div>`;
-}
-function length(s)
+
+document.getElementById("box2").onclick = function()
 {
-  var len = s.length;
-  message_container.innerHTML += `<div class="bot">Length of the string: ${len}</div>`;
+  if(counter%2!=0 && document.getElementById("box2").innerHTML == '' && game_end == 0)
+  {
+    document.getElementById("box2").innerHTML = 'X';
+    counter++; counterCheck();
+
+  }
+  else if(counter%2==0 && document.getElementById("box2").innerHTML == '' && game_end == 0)
+   {
+    document.getElementById("box2").innerHTML = 'O';
+    counter++; counterCheck();
+  }
+}
+document.getElementById("box3").onclick = function()
+{
+  if(counter%2!=0 && document.getElementById("box3").innerHTML == '' && game_end == 0)
+  {
+    document.getElementById("box3").innerHTML = 'X';
+    counter++; counterCheck();
+
+  }
+  else if(counter%2==0 && document.getElementById("box3").innerHTML == '' && game_end == 0)
+  {
+    document.getElementById("box3").innerHTML = 'O';
+    counter++; counterCheck();
+  }
+}
+document.getElementById("box4").onclick = function()
+{
+  if(counter%2!=0 && document.getElementById("box4").innerHTML == '' && game_end == 0)
+  {
+    document.getElementById("box4").innerHTML = 'X';
+    counter++; counterCheck();
+
+  }
+  else if(counter%2==0 && document.getElementById("box4").innerHTML == '' && game_end == 0)
+  {
+    document.getElementById("box4").innerHTML = 'O';
+    counter++; counterCheck();
+  }
+}
+document.getElementById("box5").onclick = function()
+{
+  if(counter%2!=0 && document.getElementById("box5").innerHTML == '' && game_end == 0)
+  {
+    document.getElementById("box5").innerHTML = 'X';
+    counter++; counterCheck();
+
+  }
+  else if(counter%2==0 && document.getElementById("box5").innerHTML == '' && game_end == 0)
+  {
+    document.getElementById("box5").innerHTML = 'O';
+    counter++; counterCheck();
+  }
+}
+document.getElementById("box6").onclick = function()
+{
+  if(counter%2!=0 && document.getElementById("box6").innerHTML == '' && game_end == 0)
+  {
+    document.getElementById("box6").innerHTML = 'X';
+    counter++; counterCheck();
+
+  }
+  else if(counter%2==0 && document.getElementById("box6").innerHTML == '' && game_end == 0)
+  {
+    document.getElementById("box6").innerHTML = 'O';
+    counter++; counterCheck();
+  }
+}
+document.getElementById("box7").onclick = function()
+{
+  if(counter%2!=0 && document.getElementById("box7").innerHTML == '' && game_end == 0)
+  {
+    document.getElementById("box7").innerHTML = 'X';
+    counter++; counterCheck();
+
+  }
+  else if(counter%2==0 && document.getElementById("box7").innerHTML == '' && game_end == 0)
+  {
+    document.getElementById("box7").innerHTML = 'O';
+    counter++; counterCheck();
+  }
+}
+document.getElementById("box8").onclick = function()
+{
+  if(counter%2!=0 && document.getElementById("box8").innerHTML == '' && game_end == 0)
+  {
+    document.getElementById("box8").innerHTML = 'X';
+    counter++; counterCheck();
+
+  }
+  else if(counter%2==0 && document.getElementById("box8").innerHTML == '' && game_end == 0)
+  {
+    document.getElementById("box8").innerHTML = 'O';
+    counter++; counterCheck();
+  }
+}
+document.getElementById("box9").onclick = function()
+{
+  if(counter%2!=0 && document.getElementById("box9").innerHTML == '' && game_end == 0)
+  {
+    document.getElementById("box9").innerHTML = 'X';
+    counter++; counterCheck();
+
+  }
+  else if(counter%2==0 && document.getElementById("box9").innerHTML == '' && game_end == 0)
+  {
+    document.getElementById("box9").innerHTML = 'O';
+    counter++; counterCheck();
+  }
+}
+
+function counterCheck()
+{
+  if(counter == 10)
+  {
+    document.getElementById("turn").innerHTML = '<center><h1>Game Over - No Winner</h1></center>';
+  }
+  if(counter%2!=0 && counter<10)
+  {
+    console.log(counter);
+    document.getElementById("turn").innerHTML = '<center><h1>Xs turn</h1></center>';
+  }
+  if(counter%2==0 && counter<10)
+  {
+    console.log(counter);
+    document.getElementById("turn").innerHTML = '<center><h1>Os turn</h1></center>';
+  }
+     if(document.getElementById("box1").innerHTML === 'X' &&
+     document.getElementById("box5").innerHTML === 'X' &&
+     document.getElementById("box9").innerHTML === 'X')
+     {
+       document.getElementById("turn").innerHTML = '<center><h1>X won</h1></center>';
+       x_score++; game_end = 1;
+     }
+     if(document.getElementById("box1").innerHTML === 'O' &&
+     document.getElementById("box5").innerHTML === 'O' &&
+     document.getElementById("box9").innerHTML === 'O')
+     {
+        document.getElementById("turn").innerHTML = '<center><h1>O won</h1></center>';
+        o_score++; game_end = 1;
+     }
+     if(document.getElementById("box3").innerHTML === 'X' &&
+        document.getElementById("box5").innerHTML === 'X' &&
+        document.getElementById("box7").innerHTML === 'X')
+        {
+          document.getElementById("turn").innerHTML = '<center><h1>X won</h1></center>';
+          x_score++; game_end = 1;
+        }
+     if(document.getElementById("box3").innerHTML === 'O' &&
+        document.getElementById("box5").innerHTML === 'O' &&
+        document.getElementById("box7").innerHTML === 'O')
+        {
+           document.getElementById("turn").innerHTML = '<center><h1>O won</h1></center>';
+           o_score++; game_end = 1;
+        }
+     if(document.getElementById("box1").innerHTML === 'X' &&
+        document.getElementById("box2").innerHTML === 'X' &&
+        document.getElementById("box3").innerHTML === 'X')
+        {
+            document.getElementById("turn").innerHTML = '<center><h1>X won</h1></center>';
+            x_score++
+        }
+     if(document.getElementById("box1").innerHTML === 'O' &&
+        document.getElementById("box2").innerHTML === 'O' &&
+        document.getElementById("box3").innerHTML === 'O')
+        {
+            document.getElementById("turn").innerHTML = '<center><h1>O won</h1></center>';
+            o_score++; game_end = 1;
+        }
+     if(document.getElementById("box4").innerHTML === 'X' &&
+        document.getElementById("box5").innerHTML === 'X' &&
+        document.getElementById("box6").innerHTML === 'X')
+        {
+            document.getElementById("turn").innerHTML = '<center><h1>X won</h1></center>';
+            x_score++; game_end = 1;
+        }
+     if(document.getElementById("box4").innerHTML === 'O' &&
+        document.getElementById("box5").innerHTML === 'O' &&
+        document.getElementById("box6").innerHTML === 'O')
+        {
+            document.getElementById("turn").innerHTML = '<center><h1>O won</h1></center>';
+            o_score++; game_end = 1;
+        }
+     if(document.getElementById("box7").innerHTML === 'X' &&
+        document.getElementById("box8").innerHTML === 'X' &&
+        document.getElementById("box9").innerHTML === 'X')
+        {
+             document.getElementById("turn").innerHTML = '<center><h1>X won</h1></center>';
+             x_score++; game_end = 1;
+        }
+     if(document.getElementById("box7").innerHTML === 'O' &&
+        document.getElementById("box8").innerHTML === 'O' &&
+        document.getElementById("box9").innerHTML === 'O')
+        {
+              document.getElementById("turn").innerHTML = '<center><h1>O won</h1></center>';
+              o_score++; game_end = 1;
+        }
+     if(document.getElementById("box1").innerHTML === 'X' &&
+        document.getElementById("box4").innerHTML === 'X' &&
+        document.getElementById("box7").innerHTML === 'X')
+        {
+              document.getElementById("turn").innerHTML = '<center><h1>X won</h1></center>';
+              x_score++; game_end = 1;
+        }
+     if(document.getElementById("box1").innerHTML === 'O' &&
+        document.getElementById("box4").innerHTML === 'O' &&
+        document.getElementById("box7").innerHTML === 'O')
+        {
+              document.getElementById("turn").innerHTML = '<center><h1>O won</h1></center>';
+              o_score++; game_end = 1;
+        }
+     if(document.getElementById("box2").innerHTML === 'X' &&
+        document.getElementById("box5").innerHTML === 'X' &&
+        document.getElementById("box8").innerHTML === 'X')
+        {
+              document.getElementById("turn").innerHTML = '<center><h1>X won</h1></center>';
+              x_score++; game_end = 1;
+        }
+     if(document.getElementById("box2").innerHTML === 'O' &&
+        document.getElementById("box5").innerHTML === 'O' &&
+        document.getElementById("box8").innerHTML === 'O')
+        {
+              document.getElementById("turn").innerHTML = '<center><h1>O won</h1></center>';
+              o_score++; game_end = 1;
+        }
+     if(document.getElementById("box3").innerHTML === 'X' &&
+        document.getElementById("box6").innerHTML === 'X' &&
+        document.getElementById("box9").innerHTML === 'X')
+        {
+              document.getElementById("turn").innerHTML = '<center><h1>X won</h1></center>';
+              x_score++; game_end = 1;
+        }
+     if(document.getElementById("box3").innerHTML === 'O' &&
+        document.getElementById("box6").innerHTML === 'O' &&
+        document.getElementById("box9").innerHTML === 'O')
+        {
+              document.getElementById("turn").innerHTML = '<center><h1>O won</h1></center>';
+              o_score++; game_end = 1;
+        }
+}
+
+function reset()
+{
+  document.getElementById("box1").innerHTML = ''
+  document.getElementById("box2").innerHTML = ''
+  document.getElementById("box3").innerHTML = ''
+  document.getElementById("box4").innerHTML = ''
+  document.getElementById("box5").innerHTML = ''
+  document.getElementById("box6").innerHTML = ''
+  document.getElementById("box7").innerHTML = ''
+  document.getElementById("box8").innerHTML = ''
+  document.getElementById("box9").innerHTML = ''
+  counter = 1;
+  game_end = 0;
+  document.getElementById("turn").innerHTML = '<center><h1>Xs turn</h1></center>';
 }

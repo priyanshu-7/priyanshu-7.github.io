@@ -1,46 +1,99 @@
+.rows{
+  display: flex;
+  flex-direction: column;
+}
 
-.chatbox {
- display: flex;
- align-items: center;
- justify-content: center;
- flex-direction: column;
- text-align: center;
- width: 100%;
- min-height: 200px;
+.row1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 100px;
 }
-.actions {
- position: fixed;
- bottom: 0;
- display: block;
- width: 100%;
+
+.row2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 100px;
 }
-.actions input{
- height: 30px;
- opacity: 0.5;
- position: center;
- width: 26%;
- outline: 0;
- border-top: 0;
- border-left: 0;
- border-right: 0;
+.row3{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 100px;
 }
-.messages div {
- font-family: 'Arial', sans-serif;
- font-family: 'Montserrat', sans-serif;
- max-width: 200%;
- display: block;
- margin: 5px;
- padding: 10px;
- border-radius: 12px;
+#box1{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height:100px;
+  width:100px;
+  border-style: solid;
 }
-.messages .bot {
- text-align: left;
- margin-right: auto;
- background: #ff6666;
- color: white;
+#box2{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height:100px;
+  width:100px;
+  border-style: solid;
 }
-.messages .user {
- text-align: right;
- margin-left: auto;
- background: #99d6ff;
+#box3{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height:100px;
+  width:100px;
+  border-style: solid;
+}
+#box4{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height:100px;
+  width:100px;
+  border-style: solid;
+}
+#box5{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height:100px;
+  width:100px;
+  border-style: solid;
+}
+#box6{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height:100px;
+  width:100px;
+  border-style: solid;
+}
+#box7{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height:100px;
+  width:100px;
+  border-style: solid;
+}
+#box8{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height:100px;
+  width:100px;
+  border-style: solid;
+}
+#box9{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height:100px;
+  width:100px;
+  border-style: solid;
+}
+.reset{
+  border-radius: 15px;
 }
