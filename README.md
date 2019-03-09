@@ -1,2 +1,1 @@
-# RiveBot
-Chatbot created using RiveScript.js.
+>> Content for priyanshu.me <<
